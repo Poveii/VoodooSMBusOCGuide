@@ -19,9 +19,15 @@ I didn't make the VoodooSMBus kext, I just spent some days to set it up the Vood
 
 Open **[IORegisterExplorer](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)** and see if the SBUS/SMBU has mouse/trackpoint things inside like photo below:
 
-If not appears you need to open the info.plist inside VoodooSMBus and add the PCI id of your SMBus Device. I did use the Hackintool to find the device id and vendor id:
+![Showing the SBUS entry in IORegisterExplorer with the VoodooSMBusControllerDriver](photos/ioregSBUS.jpeg)
 
-Combine device id with vendor id respectively with `0x` prefix, like this:
+If not appears you need to open the info.plist inside VoodooSMBus and add the PCI id of your SMBus Device. I did use the Hackintool to find the Device and Vendor of your SMBus Device (SBUS/SMBU):
+
+![Showing the PCIe entries in Hackintool](photos/hackintool.jpeg)
+
+Combine Device with Vendor id respectively with `0x` prefix and add to IOPCIMatch inside the VoodooSMBusControllerDriver in IOKitPersonalities like this (remember to add a space separating the PCI ids with each other):
+
+![Showing the PCIe entries in Hackintool](photos/voodooSMBusinfoplist.jpeg)
 
 Reboots and see if it appears in IOReg.
 
