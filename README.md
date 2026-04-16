@@ -10,7 +10,7 @@ I didn't make the VoodooSMBus kext, I just spent some days to set it up the Vood
 ## How to
 
 1. Install the **[VoodooPS2 kext](https://github.com/acidanthera/VoodooPS2)** from Acidanthera in your EFI/OC/Kexts
-2. Add the four kernel patches from original VoodooSMBus ([link to patches converted to OC]())
+2. Add the four kernel patches from original VoodooSMBus ([link to patches converted to OC](kernel_patches.plist))
 3. Install the **[VoodooSMBus](https://github.com/VoodooSMBus/VoodooSMBus)** in your EFI/OC/Kexts
 4. Remember to OC Snapshot the config.plist with **[ProperTree](https://github.com/corpnewt/propertree)**
 5. Restart and see if it's working
